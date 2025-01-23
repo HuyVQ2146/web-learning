@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <a target = "_blank" href = "https://booksonthewall.com/blog/samuel-beckett-quote-fail-better/">
+    <!--target = "_blank" để bấm vào tạo tab mới-->
+        <video height = "250" controls autoplay muted loop >
+            <source src = "mixipostcast3.mp4">
+        </video>
+    </a>
+    <!--video cũng có thể thành link-->
+    <form action="https://shorturl.at/iyqIy" method="post" enctype="multipart/form-data">
+        <!--
+        Thuộc tính enctype="multipart/form-data" được sử dụng trong thẻ <form> 
+        trong HTML để chỉ định cách dữ liệu biểu mẫu (form data) được mã hóa 
+        khi gửi lên server. Nó đặc biệt cần thiết khi biểu mẫu chứa tệp tải lên 
+        (file upload).
+            -->
+        <!--đổi phần action sang link để back-end lưu dữ liệu-->
+    <!--
+    action: Chức năng chính của action: Xác định điểm đến mà dữ liệu biểu mẫu sẽ được gửi.
+    method:
+        "get" :
+            Không bảo mật:
+                Dữ liệu hiển thị công khai trong URL.
+                Không thích hợp cho dữ liệu nhạy cảm như mật khẩu hoặc thông tin cá nhân.
+            Khi nào nên dùng GET:
+                Khi gửi dữ liệu không nhạy cảm.
+                Khi cần URL để chia sẻ hoặc đánh dấu trang (bookmark).
+        "post":Khi nào nên dùng POST:
+            Khi gửi dữ liệu nhạy cảm (mật khẩu, thông tin cá nhân).
+            Khi gửi tệp đính kèm hoặc dữ liệu phức tạp.
+    -->
+        <label for="username">username:</label>
+        <!--
+        Thuộc tính for:
+            Ý nghĩa:
+                Kết nối label với phần tử đầu vào có thuộc tính id tương ứng.
+            Cách hoạt động:
+                -Giá trị của for phải trùng với giá trị của thuộc tính id trong phần tử <input>.
+                -Khi nhấp vào nội dung của <label>, 
+                trình duyệt sẽ tự động chuyển trọng tâm (focus) 
+                đến phần tử đầu vào có id tương ứng.
+        -->
+        <input type="text" id="username" placeholder="Tên" minlength="5" maxlength="20" required>
+            <!--tạo đk đầu vào ph có ít nhất 5 kí tự và nhiều nhất 20 kí tự-->
+            <!--placeholder tạo ghi hint khi không chữ nào được điền-->
+        
+        <br>
+
+        <label for="password">password:</label>
+        <input type="password" id="password" placeholder="Mật khẩu" minlength="6" required>
+            <!--type="password" sẽ tự đổi kí tự thành .-->
+        <br>
+
+        <label for="email">email:</label>
+        <input type="email" id="email" placeholder="abc@gmail.com" minlength="6" required>
+            <!--type="email" kiểm tra xem có đúng dạng của email không-->
+        <br>
+
+        <label for="phone">phone #:</label>
+        <input type="tel" id="phone" placeholder="123-456-7890" required
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <!--type="tel" gợi ý rằng người dùng nên nhập dữ liệu có định dạng giống số điện thoại.-->
+        <!--tạo mẫu-->
+        <br>
+
+        <label for="bday">birthday:</label>
+        <input type="date" id="bday">
+            <!--type="date" tạo lịch-->
+        <br>
+
+        <label for="quantity">quantity:</label>
+        <input type="number" id="quantity" min ="0" max="99" value="1">
+            <!--type="number" tạo số // value="" tạo giá trị ban đầu ở đây -->
+        <br>
+
+        <label for="title">title:</label>
+
+        <label for="Mr.">Mr.</label>
+        <input type="radio" id ="Mr." value ="Mr." name="title">
+        <!--
+        name có thể dùng cho 1 nhóm(dùng trong form)
+        id chỉ dùng cho đúng 1 cái duy nhất
+        -->
+        <label for="Ms.">Ms.</label>
+        <input type="radio" id ="Ms." value ="Ms." name="title">
+        <label for="PhD.">PhD.</label>
+        <input type="radio" id ="PhD." value ="PhD." name="title">
+
+        <br>
+        <label for="payment">payment:</label>
+        <select id="payment">
+        <!--select: tạo bảng chọn-->
+            <option value="visa">visa</option>
+            <option value="mastercard">mastercard</option>
+            <option value="giftcard">giftcard</option>
+        </select>
+        
+        <br>
+        <label for="subscribe">subscribe:</label>
+        <input type="checkbox" id="subscribe">
+
+        <br>
+        <label for="comment">comment:</label>
+        <textarea id="comment" rows="2" cols="20"></textarea>
+
+        <br>
+        <label for="file">file:</label>
+        <input type="file" id="file" accept="image/png, image/jpg">
+        <!--
+        chọn file, chỉ chấp nhận các file dạng .png,.jpg
+        -->
+        
+        <br>
+        <br> 
+        <input type = "reset">      
+        <input type="submit"> <!--tạo nút submit-->
+    </form>
+
+    <br>
+    <h1>Page #3</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipiscing, elit hac varius placerat 
+        euismod ad, tincidunt molestie leo rhoncus pretium. Curabitur auctor bibendum 
+        et dui mi quam fames tellus rhoncus metus elementum, praesent conubia mattis 
+        hac nam vivamus pharetra semper taciti. Phasellus vehicula nascetur est eros 
+        leo curabitur egestas placerat porttitor, taciti nam nostra interdum sapien 
+        ullamcorper dapibus libero, bibendum cum proin nec per netus turpis montes. 
+        Litora dapibus praesent feugiat fames duis aliquam hac odio auctor accumsan 
+        tempus rhoncus nibh dignissim parturient, a felis vulputate dictumst magna 
+        posuere nascetur integer arcu vitae inceptos cras leo nostra. Fermentum.
+        Tortor egestas semper hendrerit justo ligula commodo habitasse, parturient 
+        maecenas erat velit nullam class, faucibus venenatis quis felis purus morbi. 
+        Potenti condimentum sagittis nisi eget pharetra suscipit cubilia, cursus 
+        lectus fames dis ligula ridiculus, morbi velit aenean imperdiet diam facilisi. 
+        Pellentesque malesuada fusce nec sociosqu integer cras in, cubilia enim odio 
+        netus tortor felis curabitur posuere, lobortis est eleifend tempus quis lacus. 
+        Metus vivamus natoque eros consequat himenaeos sapien integer fringilla per 
+        nunc dictumst massa auctor magna molestie, praesent lacinia aenean scelerisque 
+        inceptos a nascetur cras fames phasellus pulvinar bibendum arcu. Ac maecenas 
+        pulvinar praesent odio nisl purus vitae fringilla tristique arcu elementum, 
+        est fermentum vivamus dapibus venenatis fames malesuada dictumst ullamcorper.
+    </p>
+    
+    <div class="pagination">
+        <a href="form1.html"> << </a>
+        <a href="form2.html"> < </a>
+        <a href="form1.html"> 1 </a>
+        <a href="form2.html"> 2 </a>
+        <a href="form3.html" class="active"> 3 </a>
+        <a href="form4.html"> 4 </a>
+        <a href="form5.html"> 5 </a>
+        <a href="form4.html"> > </a>
+        <a href="form5.html"> >> </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    /* Tại sao border-box thường được sử dụng?
+Giúp tính toán kích thước dễ dàng hơn, đặc biệt khi thiết kế giao diện.
+Tránh việc kích thước phần tử thay đổi không mong muốn khi thêm padding hoặc border.
+Được sử dụng phổ biến trong các CSS Reset hoặc CSS Frameworks.
+    */
+/* nhờ box-sizing căn nhỏ lại chừa chỗ cho padding và border nên mới cùng dòng được */
+}
+/* *{} là để chọn tất cả */
+
+body{
+    margin: 0px;
+}
+
+.secondBox{
+    background-color: aqua;
+    border: 2px solid;
+    padding:25px;
+
+    height:auto;
+    width: 50%;
+    float:left; /* để chúng nó cùng 1 dòng */
+
+    max-width: 70%;
+    /* đặt width vượt quá max-width sẽ tự đặt theo giá trị max-width */
+    /* các giới hạn: min-height, max-height, min-width, max-width */
+    max-height: 35vh;
+    overflow:scroll;
+}
+
+.container{
+    background-color: antiquewhite;
+    height: 40vh; /* vh là đơn vị tỷ lệ khung hình */
+    border:     1px solid black
+}
+
+header{
+    background-color: lightgray;
+    text-align: center;
+    padding:25px;
+}
+footer{
+    display:block;
+    clear:both;
+/*  Clear: Thuộc tính clear được sử dụng để đảm bảo rằng 
+một phần tử không bị "đè" hoặc "chèn" bởi các phần tử đã được float.
+    clear: both;
+Khi sử dụng clear: both;, phần tử sẽ được đặt dưới tất cả các phần tử 
+được float (cả float: left và float: right) trước đó, đảm bảo rằng 
+không có phần tử nào nổi sang trái hoặc phải của nó. */
+
+    background-color: lightgray;
+    text-align: center;
+    padding:25px;
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.727);
+    height:50px
+}
+
+aside{
+    width:20%;
+    float:left;
+    padding:10px;
+}
+section{
+    width:40%;
+    float:left;
+    padding:10px;
+}
+article{
+    width:40%;
+    float:left;
+    padding:10px;
+}
+
+/* thiết kế cho điện thoại */
+@media screen and (max-width: 600px){
+/* khi chiều rộng tối đa của màn hình <= 600px */
+    aside, section, article{
+        width:100%;
+    }
+}
+
+.icon{
+    text-align: center;
+}
+.icon a{
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.fa-solid.fa-house.fa-3x{
+    color:hsl(0, 0%, 0%)
+}
+.fa-solid.fa-music.fa-3x{
+    color: hsl(300, 100%, 25%)
+}
+.fa-solid.fa-ring.fa-3x{
+    color: hsl(60, 100%, 50%)
+}
+.fa-solid.fa-newspaper.fa-3x{
+    color: hsl(240, 78%, 38%)
+}
+.fa-regular.fa-rectangle-list.fa-3x{
+    color: hsl(193, 83%, 47%)
+}
+
+.fa-solid.fa-house.fa-3x:hover{
+    color:hsl(0, 0%, 40%)
+}
+.fa-solid.fa-music.fa-3x:hover{
+    color: hsl(300, 100%, 35%)
+}
+.fa-solid.fa-ring.fa-3x:hover{
+    color: hsl(60, 100%, 80%)
+}
+.fa-solid.fa-newspaper.fa-3x:hover{
+    color: hsl(240, 78%, 48%)
+}
+.fa-regular.fa-rectangle-list.fa-3x:hover{
+    color: hsl(193, 83%, 57%)
+}
+

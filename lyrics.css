@@ -1,0 +1,58 @@
+body{
+    margin:0px;
+}
+main{
+    margin:20px;
+}
+
+span{
+    font-size: 1.2em;
+}
+span:hover{
+    background-color: yellow;
+    border-radius: 10px;
+}
+span:not(:hover){
+/* hàm not() là đk nếu không thì ... */
+    color:rgb(176, 28, 28);
+}
+
+h1{
+    text-align: center;
+}
+
+.navbar ul{
+    /* bỏ mấy cái "." đầu dòng đi */
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.785);
+    padding: 0px;
+    margin:0px;
+    overflow:hidden;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px ;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: gray;
+}
+
+.navbar li{
+    float:left;
+    /* nếu chỉ có cnay thì block của <ul> bị block của <a> che mất */
+    /* phải thêm "overflow:hidden;" và .navbar ul */
+        /* màu background-color của <a> mặc định là trắng */
+        /* chữ của a cũng đổi thành màu trắng nên k thấy gì */
+    /*
+    Giải thích cụ thể về lý do : Thẻ <ul> không bao bọc các phần tử con float
+Khi bạn sử dụng float: left; trên các phần tử con (ở đây là <li> trong <ul>), 
+các phần tử này thoát khỏi luồng tài liệu bình thường. Điều này xảy ra vì float 
+tách phần tử ra khỏi luồng (document flow), khiến cho phần tử cha không nhận 
+diện được chiều cao của các phần tử con.
+    */
+}

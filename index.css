@@ -1,0 +1,238 @@
+body{
+    margin:0
+}
+
+
+
+h1{
+    text-shadow:  3px           5px        5px     red, -3px -5px 5px blue
+           /* ngang:->trái   dọc:->dưới   độ mờ      màu, có thể làm nhiều bóng   */
+} 
+
+#box{
+    width : 300px;
+    height : 30px;
+    background-color: aqua;
+    box-shadow: 3px 3px 5px;
+}
+/* text-shadow cho văn bản còn box-shadow cho những cái còn lại */
+
+/* body mặc định là có margin nên muốn sửa phải đổi */
+
+p{
+    margin : 0px;   /* cả trên dưới trái phải là 0px */
+    margin-left :10px;
+    
+}
+
+.box{
+    border: 5px dashed;
+    font-size: 4em;
+    width: 200px;
+    height: 100px;
+    margin : 0px;
+        
+}
+#box1{
+    background-color: chartreuse; 
+    margin-left : auto;
+    /* div luôn dính về bên phải bất kể trang to như nào */
+}
+#box2{
+    background-color:deeppink;
+    margin: auto; /* auto cho ra giữa dòng(giữa trái và phải) */
+}
+#box3{
+    /* cái này để xét vị trí // sau khi đổi thì vẫn có 1 div trống ở đấy */
+    position:relative;
+    top:-219px /* cách trên 1 khoảng 219px //có top,bottom,left,right */
+}
+
+#loremDiv{
+    background-color: rgb(193, 235, 252);
+    border: 2px solid;
+    height: 100px;
+    overflow: auto; 
+    /* visible, hidden, scroll, clip (dùng với overflow-clip-margin) */
+}
+
+#div1{
+    background-color: rgb(9, 234, 159);
+    width : 100px;
+    height: 50px;
+    display:inline-block; /* mặc định của div là block */
+    /* nếu chuyển về inline thì div sẽ giống như span */
+    /* block, inline, inline-block */
+    visibility:visible /* visible,hidden */
+    /* nếu để hidden thì sẽ không thấy nhưng mà vẫn tốn chỗ */
+}
+
+#span2{
+    background-color: rgb(255, 147, 246);
+    width : 100px;
+    height: 50px;
+    display:inline-block; /* mặc định của span là inline */
+    /* phải có block bên trong thì mới hiện được width và height */
+}
+
+#p3{
+    display:inline; /* mặc định của p là block */
+}
+
+#DIV{
+    background-color: bisque;
+    border: 5px solid;
+    border-radius: 20px;
+    height:100px;
+    width:100px;
+    position:fixed;
+    /* relative,fixed,absolute,sticky,static */
+    /* static là mặc định */
+    right:0;
+    bottom:0;
+    /* ảnh sẽ luôn ở đây không đổi */
+}
+#DIV2{
+    height:50px;
+    width:50px;
+    position:absolute;
+    /* absolute là div này sẽ theo cái ngoài gần nhất */
+    background-color: aqua;
+    top: 25px;
+    left: 25px;
+}
+
+header{
+    position:sticky;
+    /* sticky là khi gặp thì nó sẽ dính lại */
+    top:0;
+    /* làm cho nó dính ở trên đầu */
+}
+
+li:nth-child(1){
+/* cứ li thứ 1 thì sẽ đổi màu */
+    color:brown;
+}
+li:nth-child(even){
+    /* cứ li chắn thì sẽ đổi màu */
+    color:rgb(119, 0, 255);
+}
+li:nth-child(3n+3){
+    /* cứ mỗi 3li (bắt đầu từ cái thứ 3) thì sẽ đổi màu */
+        color: rgb(197, 57, 152);
+}
+
+#hover p{
+    /* chọn phần <p> trong thẻ có id="hover" */
+    padding:10px;
+    background-color: aquamarine;
+    display:none;
+    /* sẽ tạm thời xóa phần <p> đi */
+}
+#hover:hover p{
+    display:inline-block;
+    /* di chuột vào thì hiện phần bị xóa */
+}
+
+
+
+.container{
+    width: 100%;
+    height: 600px;
+    border: 3px solid black;
+
+    /* cnay theo x-axis */
+    display:flex; 
+    /* cnay sẽ căn các box trong div cùng 1 hàng dù thu nhỏ trang */
+    flex-direction: row-reverse; /* flex-direction: row, column, row-reverse, column-reverse */
+    justify-content: space-evenly; /* căn theo 2 đầu và có khoảng cách ở giữa */
+    /* căn theo flex-direction */
+    /* center: ra giữa, flex-start: là hg ban đầu của flex, flex-end: là hg ngc lại bđ của flex */
+    /* 
+    space-between: khoảng cách vs 2 bên lề =0, 
+    space-around: 1 chút khoảng cách vs 2 bên lề,
+    space-evenly: khoảng cách vs 2 bên lề = khoảng cách giữa các bo x
+    */
+
+
+    /*cnay theo y-axis */
+    align-items: center   ;
+    /* align-items: baseline(các chữ sẽ ở cùng 1 dòng dù div có lệch) */
+
+    /* 
+    flex-wrap: wrap;(khi width bé quá thì div k bị nén mà xg dòng) 
+               wrap-reverse;(ở đây thì dòng từ dưới lên)
+    */
+    align-content: flex-start;
+
+    /* tạo khoảng cách giữa các div theo hàng và cột */
+    column-gap: 1em;
+    row-gap: 1em;
+}
+.box_1{
+    width:150px;
+    height:150px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 15px;
+}
+#box1_1{
+    background-color: rgb(231, 85, 56);
+    align-self: self-end; /* cho xg cuối */
+}
+#box2_1{
+    background-color: aquamarine;
+    order: -1; /* cho 2 lên đầu */
+}
+#box3_1{
+    background-color: rgb(255, 232, 127);
+    order: 1 /* cho 3 xg cuối */
+}
+#box4_1{
+    background-color: rgb(127, 131, 255);
+    align-self: self-start; /* cho lên đầu */
+}
+
+
+.box_2{
+    transform: translate(50px,50px) rotateZ(30deg) scale(1.1,1.1);
+    margin-left: 20px;
+
+}
+#box1_2{
+    width: 250px;
+    height: 250px;
+    font-size: 13em;
+    text-align: center;
+    background-color: rgb(141, 248, 99);
+    border: 5px solid black
+}
+#box2_2{
+    width: 250px;
+    height: 250px;
+    font-size: 13em;
+    text-align: center;
+    background-color: rgb(248, 99, 174);
+    border: 5px solid black
+}
+#box3_2{
+    width: 250px;
+    height: 250px;
+    font-size: 13em;
+    text-align: center;
+    background-color: rgb(99, 208, 248);
+    border: 5px solid black
+}
+/* 
+translateX, translateY là đẩy (giống margin) 
+    số dương thì sang phải, xg dưới; âm thì sang trái, lên trên
+    có thể dùng px, % (% theo % của div)
+    có thể dùng tắt cả 2 là translate(x,y)
+
+rotateX, rotateY là xoay(theo chiều 3d qua 2 trục x,y rồi chiếu nó lại trên 2d)
+    có thể dùng deg (độ)
+rotateZ thì là xoay chính mặt phẳng
+
+scaleX,scaleY là chỉnh độ lớn theo trục x,y(tỉ lệ 1 là 100%)
+    có thể dùng tắt cả 2 là scale(x,y) hoặc scale(a)-(a cho cả x và y)
+*/

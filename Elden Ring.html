@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="Elden Ring/elden_ring_logo-freelogovectors.net_.png">
+    <!--link ở đây là để tạo icon(favicon) cho web-->
+    <link rel="stylesheet" href="Elden Ring.css">
+    <title>Document</title>
+</head>
+<body>
+    <audio controls autoplay loop >
+        <source src="Elden Ring/elden-ring-the-final-boss-music-101soundboards.mp3">
+    </audio>
+
+    <h1>Elden Ring pictures</h1>
+    <a href = "https://vi.wikipedia.org/wiki/Elden_Ring">
+        <img src = "Elden Ring/Elden-Ring-First-Boss.jpg" alt="Elden Ring picture" height = "200">
+    <!--thêm alt để nếu ảnh không hiện sẽ hiện dòng đấy-->
+    </a>
+    <!--chèn thêm <a> để biến ảnh thành 1 link-->
+
+    <h2>Bosseses</h2>
+    <p>
+        Bosses in Elden Ring are powerful enemies that add challenging experiences to the 
+        game. Bosses are encountered throughout the game in both the overworld and inside 
+        traditional dungeon-style levels. While some must be fought to progress through 
+        the story, most are optional. Each boss features a unique set of moves, gear, 
+        and various weaknesses and resistances to different damage types and styles 
+        of play. Successfully defeating a boss grants the player larger amounts of 
+        Runes than traditional enemies in their respective areas, and many offer 
+        rare and/or unique armaments, armor, magic, and other items. This page 
+        contains a list of all the bosses encountered in the game.
+    </p>
+    <ul id="bosses">
+        <li id="Dragonlord">Dragonlord Placidusax</li>
+        <li id="Black_Blade">Maliketh, the Black Blade</li>
+        <li id="Lichdragon">Lichdragon Fortissax</li>
+        <li id="Lord_of_Blood">Mohg, Lord of Blood</li>
+        <li id="Warrior">Hoarah Loux, Warrior</li>
+    </ul>
+
+
+
+
+    <button onclick="doSomething()" style = "font-size: 15px; background-color:orange; 
+        border-radius: 25px; color:aliceblue">Click me!</button>
+    <!--onclick để khi bấm chuột vào có thay đổi-->
+    <button onclick="doSomething2()" style = "font-size: 15px; background-color:orange; 
+        border-radius: 25px; color:aliceblue">Click me!</button>
+        
+        <p id="greeting">Hello.</p>
+
+        <!--tạo chức năng cho hàm doSomething()-->
+        <script>
+            function doSomething(){
+                document.getElementById("greeting").innerHTML = "Welcome tanished!"
+            }
+        </script>
+        <!--
+        document: Đại diện cho toàn bộ tài liệu HTML hiện tại.
+                  Cho phép truy cập và thao tác với các phần tử trong cây DOM(Document Object Model).
+
+        getElementById("greeting"): Tìm và trả về phần tử HTML có thuộc tính id="greeting"
+        .innerHTML: Truy cập hoặc thay đổi nội dung HTML bên trong phần tử DOM được trả về
+        -->
+        <script>
+            function doSomething2(){
+                document.getElementById("greeting").innerHTML = "Hello."
+            }
+        </script>
+        
+        
+
+    <br>
+
+    <a href = "https://www.shorturl.at/" id="url">
+        Web rút gọn URL
+    </a>
+    <hr>
+
+    <div class="gallery">
+        <a target="_blank" href="Elden Ring/giphy/fire.gif">
+            <img src = "Elden Ring/giphy/fire.gif" alt = "Elden Ring GIF (có sẵn)" height = "200">
+        </a>
+        <div class="description">Fire</div>
+    </div>
+    <div class="gallery">
+        <a target="_blank" href="Elden Ring/giphy/thunder.gif">
+            <img src = "Elden Ring/giphy/thunder.gif" alt = "Elden Ring GIF (có sẵn)" height = "200">
+        </a>
+        <div class="description">Thunder</div>
+    </div>
+    <div class="gallery">
+        <a target="_blank" href="Elden Ring/giphy/deer.gif">
+            <img src = "Elden Ring/giphy/deer.gif" alt = "Elden Ring GIF (có sẵn)" height = "200">
+        </a>
+        <div class="description">Deer</div>
+    </div>
+
+    <hr>
+
+    <img src = "https://shorturl.at/sVLPH"
+    alt = "Elden Ring GIF (link)"
+    height = "200">
+    <!--có thể thêm GIF vào thông qua <img> bằng tải file hay link đều được --> 
+    <hr> 
+    
+    <iframe src="https://giphy.com/embed/3EHd16bJcBrBOUl29y" 
+    width="356" height="200" frameBorder="0" class="giphy-embed" allowFullScreen>
+    <!--width = "480" height = "269"-->
+    </iframe>
+    <p><a href="https://giphy.com/gifs/xbox-game-xbox-series-x-s-3EHd16bJcBrBOUl29y">via GIPHY</a></p>
+    <!--
+        dùng iframe thì có thể dùng thêm 
+        các tính năng tương tác với tệp GIF như 1 trg HTML
+    -->
+    <!--cái này copy từ web giphy ra -->
+</body>
+</html>

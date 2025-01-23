@@ -1,0 +1,293 @@
+/* tệp .css có thể dùng cho nhiều tab khác nhau */
+
+/* tạo font chữ mới bằng file đã tải */
+@font-face{
+    src: url(fonts/BebasNeue-Regular.ttf);
+    /* nguồn */
+    font-family: "Bebas Neue"
+    /* tên của font chữ */
+}
+
+@font-face{
+    src: url(fonts/PermanentMarker-Regular.ttf);
+    font-family: "PermanentMarker"
+}
+
+@font-face{
+    src: url(fonts/Caveat-VariableFont_wght.ttf);
+    font-family: "Caveat"
+}
+
+
+body{
+    background-color: rgb(0,0,0);
+}
+
+main{
+    border: 3px dotted bisque;
+    border-radius: 10px;
+
+    display:flow-root;
+    /* thêm cái này thì ảnh sẽ luôn được căn vào trong block của main
+    kể cả khi ảnh có bị tràn ra khỏi phần border */
+}
+
+h1{
+    color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: blueviolet;
+    /*hoặc viết tắt thành 1 dòng như ở h2 */
+
+    border-radius: 10px;
+}
+
+h2{
+    border: 3px dashed bisque;
+    /* solid, double, dashed, dotted, groove, ridge, inset, outset, none */
+    border-radius: 20px;
+}
+h2{
+    color: white
+}
+
+#img1{
+    float:left; /* cho ảnh ở bên trái (float làm cho chữ có thể hiện bên phải) */
+    margin: 10px;
+}
+
+#img2{
+    float:right;
+    margin: 10px;
+}
+
+p{
+    border-top: 3px solid white;
+    border-bottom: 3px outset orange;
+    border-left: 3px dashed rgb(205, 19, 25);
+    border-right: 3px groove rgb(29, 163, 152);
+
+    border-radius: 15px;
+}
+p{
+    color: rgb(255,255,255);
+    font-family: "PermanentMarker"
+}
+
+/* css cho id sẽ đè lên cho cả lệnh <p> */
+/* # đằng trc là để tìm id */
+/* có nhiều cách để gọi màu */
+#p1{
+    color:rgb(0, 255, 255) /*aqua*/ 
+}
+
+#p2{
+    color: yellow
+}
+
+#p3{
+    color:#FFE4C4;
+}
+
+/* id đc ưu tiên hơn class */
+#p4{
+    color: hsl(120, 61%, 50%) /*limegreen*/;
+    font-family: "Caveat"; 
+    font-size: 25px;
+    /* dùng font tải thì phải chỉnh lại font-size,... */
+}   
+
+/* . đằng trc là để tìm class */
+.odd{
+    font-family:monospace;
+    font-size: 18px;
+}
+/* có thể để nhiều font trong 1 font-family 
+để nếu font này không hiện được thì sẽ thay bằng font khác  */
+/* font-size mặc định của <p> là 14px */
+
+.even{
+    font-style: italic;
+    font-size: 1.1em;
+    font-weight:bold;
+    font-family: "Playwrite IN" /*font này đã link trong html (từ gg font)*/
+
+}
+/* em là đơn vị %: 1.1 em = 110% mặc định */
+/* font-weight là độ đậm */
+ 
+.temp{
+    font-size: 1.4em;
+}
+
+#container{
+    display:flow-root;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+#container p {  
+/* nếu " " xog p thì là tất cả các thẻ <p> trong id này sẽ chạy */
+/* descendant */
+    color:aqua
+}
+#container > p{ 
+/* nếu ">" xog p thì là các thẻ <p> ngay trong id này sẽ chạy (trong div k tính) */
+/* child */
+color: yellow;
+}
+#container ~ p{
+/* nếu "~" xog p thì là tất cả các thẻ <p> bằng lứa với id này sẽ chạy (trong div k tính)*/
+/* general sibling */
+color:aquamarine;
+}
+#container + p{
+/* nếu "~" xog thẻ <p> đầu tiên bằng lứa với id này sẽ chạy (trong div k tính) */
+/* adjacent sibling */
+color: greenyellow;
+}
+
+.dropdown{
+    display:inline-block;
+    /* inline-block là kết hợp của inline và block */
+}
+.dropdown button{
+    font-size: 15px; 
+    background-color:orange; 
+    border-radius: 5px; 
+    color:aliceblue;
+
+/* style inline đc ưu tiên hơn ở trong css */
+    padding: 8px 15px;
+    cursor: pointer; /* chuyển con trỏ thành bàn tay di di chuyển lên <button> */
+}
+.dropdown a{
+    display:block;
+    color:black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown .content{
+    display:none;
+    position:absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgb(68, 198, 148);
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+/* muốn đổi màu thì không nên dùng inline style */
+    background-color: rgb(255, 134, 48);
+}
+.dropdown a:hover{
+/* muốn đổi màu thì không nên dùng inline style */
+    background-color: rgb(151, 145, 145);
+    color:white
+}
+
+
+
+
+.temp{
+    animation-name: shrink; /* gọi animation ra */
+    animation-duration: 2s;
+}
+.last{
+    animation-name: colorChange;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; /* tạo vòng lặp vô tận cho animation */
+}
+h2{
+    animation-name: Fade; 
+    animation-duration: 2s; 
+}
+p:hover{
+    animation-name: glow; /* sẽ chạy shrink sau glow (có thể do class .temp) */
+    animation-duration: 2s;
+}
+#header1{
+    text-align: center;
+    animation-name: grow; 
+    animation-duration: 2s;
+}
+#box{
+    background-color: rgb(48, 52, 52);
+    border: 3px dotted rgb(0, 238, 255);
+
+    animation-name: rotateX;
+    animation-duration: 2s; /* tgian chạy animation */
+    animation-direction: reverse; 
+                      /* normal, alternate(đi rồi lại về), alternate-reverse */
+    animation-play-state: running;/* paused */
+    animation-timing-function: ease-in-out; /* mặc định */
+                            /* linear: cả đoạn có tốc độ = nhau
+                               steps(cắt thành 10 đoạn (khung hình) 
+                               hoặc dùng cubic-bezier(trong inspect)*/
+}
+#box img{
+    width: 100%
+}
+#box .description{
+    color: yellow;
+    text-align: center;
+}
+#img1{
+    animation-name: rotateZ;
+    animation-duration: 2s;
+}
+#img2{
+    animation-name: rotateZ;
+    animation-duration: 2s;
+}
+img:active{
+/* active là khi nhấn giữ chuột trái */
+    animation-name: glow;
+    animation-duration: 2s;
+
+    animation-iteration-count: infinite;
+    /* nếu cái đc chọn đã có animation khác thì nó sẽ ghi đè animation này */
+}
+@keyframes slideLeft{ /*tên animation là tự đặt*/
+    from{transform: translateX(1000%)}
+    /* from là từ vị tri trí này về vị trí mặc định */
+}
+@keyframes slideRight{ 
+    to{transform: translateX(1000%)}
+    /* from là từ vị trí mặc định về vị tri trí này */
+}
+@keyframes slideUp{ 
+    from{transform: translateY(1000%)}
+}
+@keyframes slideDown{ 
+    to{transform: translateY(1000%)}
+}
+
+@keyframes rotateX{
+    100%{transform: rotateX(360deg)}
+    /* dùng 100% tgian(duration) để thực hiện, 
+    0% còn lại để thực hiện ngược lại */
+}
+@keyframes rotateZ{
+    100%{transform: rotateZ(360deg)}
+
+}
+@keyframes grow{
+    50%{transform: scale(1.2)}
+}
+@keyframes shrink{
+    50%{transform: scale(0.7)}
+}
+@keyframes Fade{
+    50%{opacity: 0}
+}
+@keyframes colorChange{
+    0%{color:rgb(238, 62, 62)}
+    20%{color:rgb(255, 25, 152)}
+    40%{color:rgb(255, 235, 13)}
+    60%{color:rgb(41, 255, 226)}
+    80%{color:rgb(200, 42, 248)}
+    100%{color:rgb(238, 62, 62)}
+}
+@keyframes glow{
+    50%{box-shadow: 0px 0px 50px rgb(39, 174, 39);}
+}
