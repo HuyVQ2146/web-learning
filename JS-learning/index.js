@@ -15,5 +15,30 @@ document.getElementById('p').textContent = 'This is a simple website created usi
 let x;
 x = 100;
 console.log(x);
+x = x + 1; // + - * ** / %  += -= *= /= **= %= giống python
+console.log(x);
+
 let y  = 123;
 console.log(y);
+y++; //cộng thêm 1 vào y
+console.log(y);
+y--; // trừ đi 1 vào y
+console.log(y)
+
+
+let Name = 'Huy';
+let age = 19;
+let price = 500;
+let gpa = 3.45;
+let online = true;
+console.log(`Your age is ${age}, your current gpa is ${gpa}, and the test price is ${price}`)
+// muốn dùng format trong JS thì dùng dấu `` 
+console.log(typeof Name) //kiểu dữ liệu
+console.log(typeof age) 
+console.log(typeof online)
+document.getElementById('p1').textContent = Name;
+document.getElementById('p2').textContent = age;
+document.getElementById('p3').textContent = gpa;
+
+let friendName = window.prompt("Friend Name: ")
+console.log(friendName)
