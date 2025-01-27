@@ -75,3 +75,6 @@ document.getElementById('sub-radius').onclick = function(){
     console.log(area);
     document.getElementById('result').textContent = 'Area: ' + String(area) ;
 }
+
+console.log(Math.PI) //thư viện Math trong js
+console.log(Math.E)
