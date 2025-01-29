@@ -76,5 +76,75 @@ document.getElementById('sub-radius').onclick = function(){
     document.getElementById('result').textContent = 'Area: ' + String(area) ;
 }
 
-console.log(Math.PI) //thư viện Math trong js
-console.log(Math.E)
+console.log(Math.PI); //thư viện Math trong js
+console.log(Math.E);
+console.log(Math.floor(4.5)); // thư viện giống python
+console.log(Math.ceil(4.5));
+console.log(Math.pow(3,5));
+console.log(Math.sqrt(99));
+console.log(Math.trunc(8.33)); // làm tròn lên xg
+console.log(Math.log(267));
+console.log(Math.sin(45)); //ở đây số bên trong tự động là độ
+console.log(Math.cos(45));
+console.log(Math.tan(45)) ;
+console.log(Math.abs(-456));
+console.log(Math.sign(99)); //cnay xét âm dương: âm là -1, 0 là 0, dương là 1
+console.log(Math.max(132,-123,31));
+console.log(Math.min(-1109,33,99));
+console.log(Math.random()); // tạo số bất kì giữa 1 và 0
+
+// tạo 1 số random giữa 2 số
+let min = 1;
+let max = 100;
+let ran = Math.trunc(Math.random() * (max - min)) + min;
+console.log(ran);
+
+const Age = document.getElementById('age');
+const sub_age = document.getElementById("sub-age");
+const result_age = document.getElementById("result-age");
+
+sub_age.onclick = function(){
+    age = Number(Age.value);
+    if(age > 70){
+        console.log('You are old');
+        result_age.textContent = 'You are old';
+    }
+    else if(age < 20){
+        console.log('You are young');
+        result_age.textContent = 'You are young';
+    }
+    else{
+        console.log('You are middle-aged');
+        result_age.textContent = 'You are middle-aged';
+    }
+
+}
+
+const checkBox = document.getElementById('checkBox');
+const Visa = document.getElementById('Visa');
+const Paypal = document.getElementById('Paypal');
+const Card = document.getElementById('Card');
+const form_btn = document.getElementById('form-btn');
+const sub = document.getElementById('sub');
+const pay = document.getElementById('pay');
+form_btn.onclick = function(){
+    if (checkBox.checked){ // cái .checked sẽ ktra true false (cả đc chọn hay k)
+        sub.textContent = "Subcribed!"
+    }
+    else{
+        sub.textContent = "Not Subcribed yet!"
+    }
+
+    if (Paypal.checked){
+        pay.textContent = "Pay with PayPal"
+    }
+    else if (Visa.checked){
+        pay.textContent = "Pay with Visa"
+    }
+    else if (Card.checked){
+        pay.textContent = "Pay with Card"
+    }
+    else{
+        pay.textContent = "Not paid yet!"
+    }
+}

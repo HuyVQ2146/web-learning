@@ -2,3 +2,9 @@ h1{
     display: inline-block;
     background-color: aqua;
 }
+span{
+    background-color: yellow;
+}
+button{
+    cursor:pointer;
+}
