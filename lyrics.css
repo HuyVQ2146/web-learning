@@ -45,9 +45,10 @@ h1{
 .navbar li{
     float:left;
     /* nếu chỉ có cnay thì block của <ul> bị block của <a> che mất */
-    /* phải thêm "overflow:hidden;" và .navbar ul */
-        /* màu background-color của <a> mặc định là trắng */
-        /* chữ của a cũng đổi thành màu trắng nên k thấy gì */
+    /* phải thêm "overflow:hidden;" vào .navbar ul */
+        /* Khi thêm overflow: hidden;, trình duyệt buộc 
+        <ul> phải mở rộng để chứa hết các <li> đã float, 
+        giúp nền (background-color) của <ul> hiển thị đầy đủ.*/
     /*
     Giải thích cụ thể về lý do : Thẻ <ul> không bao bọc các phần tử con float
 Khi bạn sử dụng float: left; trên các phần tử con (ở đây là <li> trong <ul>), 

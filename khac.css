@@ -141,7 +141,7 @@ color: yellow;
 color:aquamarine;
 }
 #container + p{
-/* nếu "~" xog thẻ <p> đầu tiên bằng lứa với id này sẽ chạy (trong div k tính) */
+/* nếu "+" xog thẻ <p> đầu tiên bằng lứa với id này sẽ chạy (trong div k tính) */
 /* adjacent sibling */
 color: greenyellow;
 }
