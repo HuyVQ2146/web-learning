@@ -8,3 +8,7 @@ span{
 button{
     cursor:pointer;
 }
+label{
+    background-color: aquamarine;
+    border-radius: 5px;
+}
