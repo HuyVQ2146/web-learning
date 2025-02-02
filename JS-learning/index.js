@@ -103,6 +103,7 @@ const Age = document.getElementById('age');
 const sub_age = document.getElementById("sub-age");
 const result_age = document.getElementById("result-age");
 
+const AgePara = document.getElementById("AgePara");
 sub_age.onclick = function(){
     age = Number(Age.value);
     if(age > 70){
@@ -117,7 +118,27 @@ sub_age.onclick = function(){
         console.log('You are middle-aged');
         result_age.textContent = 'You are middle-aged';
     }
+    
+    // viết tắt lệnh if else của js trong 1 dòng
+    let message = age>=18 ? "You are old enough to enter the website.":"You cannot access this website!";
+    // dấu ? để check:         if True                                 else      if False
+    AgePara.textContent = message;
 
+    let webAge = true
+    let secondMess = webAge ? "This website is for adults." : "This website is for kids.";
+    AgePara2.textContent = secondMess;
+
+}
+
+
+const money = document.getElementById('money');
+const sub_money = document.getElementById('sub-money');
+const moneyPara = document.getElementById('moneyPara');
+sub_money.onclick = function(){
+    Money = Number(money.value);
+    
+    let discount = Money>=100 ? 10:0 ; // cái if else có thể là gì cx đc
+    moneyPara.textContent = `Your total is $${Money - Money*(discount/100)}.`;     
 }
 
 const checkBox = document.getElementById('checkBox');
