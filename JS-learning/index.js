@@ -3,6 +3,35 @@ alert("This is an alert!"); //window.alert() và alert() không khác gì nhau
 window.alert("This is the second alert!"); //sau cái đầu thì sẽ hiện cnay
 //js cũng chạy theo thứ tự từ trên xuống dưới
 
+let check = window.prompt("Today: ")
+let day = Number(check);
+switch(day){ //thay thế cho if else
+    case 1: // if day == 1
+        console.log("Monday");
+        break; // kco break thì nó sẽ chạy cả các case sau (dù sai)
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default: // nếu các case kia đều sai thì:
+        console.log(`${check} is not a day!`);
+        break;
+    
+}
 /*
 Đây là cách
 để comment nhiều dòng
@@ -75,6 +104,37 @@ document.getElementById('sub-radius').onclick = function(){
     console.log(area);
     document.getElementById('result').textContent = 'Area: ' + String(area) ;
 }
+
+
+
+const score = document.getElementById('myScore');
+const sub_score = document.getElementById('sub-score');
+const grade = document.getElementById("grade");
+
+sub_score.onclick = function(){
+    switch(true){
+        case score.value > 100: //if (score.value > 100) == true
+            grade.textContent = "You're expelled for cheating!";
+            break;
+        case score.value >= 90:
+            grade.textContent = "Your grade is: A.";
+            break;
+        case score.value >= 80:
+            grade.textContent = "Your grade is: B.";
+            break;
+        case score.value >= 70:
+            grade.textContent = "Your grade is: C.";
+            break;
+        case score.value >= 60:
+            grade.textContent = "Your grade is: D.";
+            break;
+        default:
+            grade.textContent = "Your grade is: F.";
+            break;
+    }
+}
+
+
 
 console.log(Math.PI); //thư viện Math trong js
 console.log(Math.E);
