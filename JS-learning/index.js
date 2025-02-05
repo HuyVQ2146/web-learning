@@ -1,4 +1,7 @@
 console.log("Hello"); //cái này sẽ hiện trong phần console trong inspect của web
+let hello = "Hello";
+console.log(hello.charAt(2)); // hiện ra "l" trong console (giống hello[2] trong python)
+
 alert("This is an alert!"); //window.alert() và alert() không khác gì nhau
 window.alert("This is the second alert!"); //sau cái đầu thì sẽ hiện cnay
 //js cũng chạy theo thứ tự từ trên xuống dưới
