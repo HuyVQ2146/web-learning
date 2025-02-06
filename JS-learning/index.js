@@ -1,6 +1,21 @@
-console.log("Hello"); //cái này sẽ hiện trong phần console trong inspect của web
+console.log("Hello   "); //cái này sẽ hiện trong phần console trong inspect của web
 let hello = "Hello";
 console.log(hello.charAt(2)); // hiện ra "l" trong console (giống hello[2] trong python)
+console.log(hello.indexOf("o")); // giống hello.index("o") trong python
+console.log(hello.lastIndexOf("o")); // in ra idx cuối cùng là "o"
+console.log(hello.length); // là len(hello) trong python
+console.log(hello.trim()); // là hello.strip() trong python
+console.log(hello.toUpperCase()); // là hello.upper() trong python
+console.log(hello.toLowerCase()); // là hello.lower() trong python
+console.log(hello.repeat(3)); // là hello*3 trong python
+console.log(hello.startsWith("k")); // check(true,false) xem nó có bắt đầu = "k" không
+console.log(hello.endsWith("o")); // check(true,false) xem nó có kết thúc = "o" không
+console.log(hello.includes("l")); // check(true,false) xem "l" có trong hello ko
+ 
+let phone = "123-456-7890";
+console.log(phone.replaceAll("-","/")); // thay thế mọi "-" thành "/"
+console.log(phone.padStart(15,"*")); // thêm vào đầu dãy "*" đến khi length == 15
+console.log(phone.padEnd(15,"*")); // thêm vào cuối dãy "*" đến khi length == 15
 
 alert("This is an alert!"); //window.alert() và alert() không khác gì nhau
 window.alert("This is the second alert!"); //sau cái đầu thì sẽ hiện cnay
