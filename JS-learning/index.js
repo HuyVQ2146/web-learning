@@ -1,4 +1,4 @@
-console.log("Hello   "); //cái này sẽ hiện trong phần console trong inspect của web
+console.log("Hello  "); //cái này sẽ hiện trong phần console trong inspect của web
 let hello = "Hello";
 console.log(hello.charAt(2)); // hiện ra "l" trong console (giống hello[2] trong python)
 console.log(hello.indexOf("o")); // giống hello.index("o") trong python
@@ -11,6 +11,8 @@ console.log(hello.repeat(3)); // là hello*3 trong python
 console.log(hello.startsWith("k")); // check(true,false) xem nó có bắt đầu = "k" không
 console.log(hello.endsWith("o")); // check(true,false) xem nó có kết thúc = "o" không
 console.log(hello.includes("l")); // check(true,false) xem "l" có trong hello ko
+console.log(hello.slice(0,4)); // là hello[0;4] trong python
+console.log(hello.slice(-3)); // là hello[-3:] trong python
  
 let phone = "123-456-7890";
 console.log(phone.replaceAll("-","/")); // thay thế mọi "-" thành "/"
