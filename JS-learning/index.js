@@ -89,12 +89,38 @@ document.getElementById('p1').textContent = Name;
 document.getElementById('p2').textContent = age;
 document.getElementById('p3').textContent = gpa;
 
-let friendName = window.prompt("Friend Name: ");
+let friendName = window.prompt("Friend Name: "); // phải điền tên thì ms chạy đc những dòng tiếp theo
+console.log(friendName);    
+if ( !friendName ) { // if not friendName
+    console.log("Bạn chưa nhập tên bạn bè");
+}
+else{
+    friendName = friendName.trim();
+    let letter = friendName.charAt(0);
+    letter = letter.toUpperCase();
+    let extraLetters = friendName.slice(1);
+    friendName = letter + extraLetters;
+    console.log(friendName);
+}
+
+// hoặc 
+friendName ="  cThuLul     ";
+friendName = friendName.trim().charAt(0).toUpperCase() + friendName.trim().slice(1).toLowerCase();
 console.log(friendName);
+
+
 let friendAge = window.prompt("Friend Age: ");
 hisAge = Number(friendAge);
 hisAge += 1;
-console.log(hisAge)
+console.log(hisAge);
+
+let temp  = window.prompt("Nhiệt độ:");
+if (temp > 0 && temp <= 40) { //    && là and; || là or; ! là not
+    console.log("Vẫn OK");
+}
+else{
+    console.log("Chết ngoài trời");
+}
 
 let k = 'pizza';
 x = Number(k);
