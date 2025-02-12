@@ -89,19 +89,24 @@ document.getElementById('p1').textContent = Name;
 document.getElementById('p2').textContent = age;
 document.getElementById('p3').textContent = gpa;
 
-let friendName = window.prompt("Friend Name: "); // phải điền tên thì ms chạy đc những dòng tiếp theo
-console.log(friendName);    
-if ( !friendName ) { // if not friendName
-    console.log("Bạn chưa nhập tên bạn bè");
+let friendName = "";
+while (friendName === "" || friendName === null ){
+    friendName = window.prompt("Friend Name: "); // phải điền tên thì ms chạy đc những dòng tiếp theo
+    console.log(friendName);    
+
+    if ( !friendName ) { // if not friendName
+        console.log("Bạn chưa nhập tên bạn bè");
+    }
+    else{
+        friendName = friendName.trim();
+        let letter = friendName.charAt(0);
+        letter = letter.toUpperCase();
+        let extraLetters = friendName.slice(1);
+        friendName = letter + extraLetters;
+        console.log(friendName);
+    }
 }
-else{
-    friendName = friendName.trim();
-    let letter = friendName.charAt(0);
-    letter = letter.toUpperCase();
-    let extraLetters = friendName.slice(1);
-    friendName = letter + extraLetters;
-    console.log(friendName);
-}
+
 
 // hoặc 
 friendName ="  cThuLul     ";
@@ -151,7 +156,19 @@ document.getElementById('sub-radius').onclick = function(){
     document.getElementById('result').textContent = 'Area: ' + String(area) ;
 }
 
+if(pi == "3.14159"){ // True;  dấu "==" trong js chỉ cần bằng gtri chứ khác type vx đc
+    console.log("True");
+}
+else if( pi === "3.14159"){ // False; dấu "===" là phải giống cả gái trị và type
+    console.log("False")
+}
 
+if(pi != "3.14159"){ // False;  cùng gtri mà khác type vx đc
+    console.log("True");
+}
+else if( pi !== "3.14159"){ // True; dấu "!==": là phải giống cả giá trị và type thì ms là False
+    console.log("False")
+}
 
 const score = document.getElementById('myScore');
 const sub_score = document.getElementById('sub-score');
@@ -275,3 +292,4 @@ form_btn.onclick = function(){
         pay.textContent = "Not paid yet!"
     }
 }
+
