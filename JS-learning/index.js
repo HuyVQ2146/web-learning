@@ -89,6 +89,8 @@ document.getElementById('p1').textContent = Name;
 document.getElementById('p2').textContent = age;
 document.getElementById('p3').textContent = gpa;
 
+/* 
+    #vòng lặp vô hạn này làm crash máy 
 let friendName = "";
 while (friendName === "" || friendName === null ){
     friendName = window.prompt("Friend Name: "); // phải điền tên thì ms chạy đc những dòng tiếp theo
@@ -107,6 +109,32 @@ while (friendName === "" || friendName === null ){
     }
 }
 
+hoặc dùng:
+
+let friendName;
+do {
+    ---nhập func tương tự trên 
+} while(friendName === "" || friendName === null )
+
+-thì nó cũng chạy y hệt chương trình trên
+
+
+    #có thể dùng check log in:
+let login = false;
+let username;
+let password;
+while (!login) {
+    username = window.prompt("Please enter your username");
+    password = window.prompt("Please enter your password");
+    if (username === "admin" && password === "password") {
+        login = true;
+        console.log(`Welcome to the website Mr. ${username} !`);
+    }
+    else {
+    console.log("Invalid username or password");
+    }
+}
+*/
 
 // hoặc 
 friendName ="  cThuLul     ";
