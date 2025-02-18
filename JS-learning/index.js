@@ -346,8 +346,13 @@ function sum(x, y ){
 }
 console.log(sum(9,87))
 
+function isEven(num){
+    return num % 2 === 0 ? `The number: ${num} is even` : `The number: ${num} is odd`;
+}
+console.log(isEven(524))
+
 function checkRegularEmail(email) {
-    if(email.includes('@') && email.includes('.com')){
+    if(email.includes('@') && email.includes('.com')){ // giống if "@" in email trong python
         return true;
     }
     else{
