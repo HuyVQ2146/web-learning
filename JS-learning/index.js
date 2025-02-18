@@ -242,7 +242,7 @@ console.log(Math.abs(-456));
 console.log(Math.sign(99)); //cnay xét âm dương: âm là -1, 0 là 0, dương là 1
 console.log(Math.max(132,-123,31));
 console.log(Math.min(-1109,33,99));
-console.log(Math.random()); // tạo số bất kì giữa 1 và 0
+console.log(Math.random()); // tạo số bất kì giữa >=0 và <1
 
 // tạo 1 số random giữa 2 số
 let min = 1;
@@ -321,6 +321,37 @@ form_btn.onclick = function(){
     }
 }
 
-for (let i = 1; i < 11 ; i++){
-    console.log(i)
+for (let i = 1; i < 20 ; i++){ // i+= 1 cx đc
+    if (i == 9) {
+        console.log("failure");
+        continue
+    }
+    else if (i == 15) {
+        console.log(i);
+        console.log("End");
+        break;
+    }
+    else {
+        console.log(i)
+    }
 }
+
+function hpBrthd(name,age){
+    console.log(`Happy Birthday ${name}! You are ${age} now! Get your ass up and get to work!`)
+}
+hpBrthd('Duy Đức', 19)
+
+function sum(x, y ){
+    return x + y;
+}
+console.log(sum(9,87))
+
+function checkRegularEmail(email) {
+    if(email.includes('@') && email.includes('.com')){
+        return true;
+    }
+    else{
+        return false;
+    }  
+}
+console.log(checkRegularEmail('duyduc@gmail.com'))
