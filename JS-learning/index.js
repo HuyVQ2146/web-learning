@@ -359,4 +359,63 @@ function checkRegularEmail(email) {
         return false;
     }  
 }
-console.log(checkRegularEmail('duyduc@gmail.com'))
+console.log(checkRegularEmail('duyduc@gmail.com'))  
+
+let a = 10;
+
+function func1(){
+    console.log(a); // a = 10
+}
+func1();
+
+function func2(){
+    let a = 30;
+    console.log(a); // a = 30
+}
+func2();
+console.log(a); // a = 10  (a chỉ bằng 30 trong func2)
+
+
+/* Không chạy: k thể có 2 biến a
+function func3(){
+    console.log(a); // a = 10
+    let a = 20;
+    console.log(a); // a = 20
+}
+func3();
+*/
+
+let fruits = ["apple", "banana", "orange"];
+console.log(fruits);
+console.log(fruits[1]);
+fruits[3] = "coconut";
+console.log(fruits);
+fruits[1] = "grape";
+console.log(fruits);
+console.log(fruits[3]);
+console.log(fruits[4]); // kco idx 4 thì sẽ cho ra undifined
+fruits.push("kiwi"); // giống .append() trong python
+console.log(fruits);
+fruits.pop(); // giống .pop() trong python
+console.log(fruits);
+fruits.unshift("strawberry"); // giống .appendleft() trong python
+console.log(fruits);
+fruits.unshift("blueberry");
+console.log(fruits);
+fruits.shift(); // giống .popleft() trong python
+console.log(fruits);
+console.log(fruits.length);
+let idx = fruits.indexOf("grape");
+console.log(idx);
+let checkFruit = fruits.indexOf("potato"); // =1 tức là kco trong array
+console.log(checkFruit);
+for (let f = fruits.length -1; f >= 0; f--){
+    console.log(fruits[f]);
+}
+for(let fruit of fruits){
+    console.log(fruit); // giống 'for i in array' trong python
+}
+fruits.sort(); // giống arr.sort() trong python
+console.log(fruits);
+fruits.sort().reverse(); 
+console.log(fruits);
